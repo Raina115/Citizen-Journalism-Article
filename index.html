@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"回家"：一份同妻女儿的家庭回忆录| Raina在采访</title>
+    <style>
+        /* --- 基础设置：模拟纸媒质感 --- */
+        :root {
+            --bg-color: #fdfdfd;
+            --text-main: #222;
+            --text-light: #555;
+            --accent-red: #bb1919;
+            --link-color: #1a0dab;
+            --font-serif: "Georgia", "Songti SC", "SimSun", serif;
+            --font-sans: "Helvetica Neue", "Arial", "PingFang SC", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        /* --- 顶部栏目条 --- */
+        .top-bar {
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 0;
+            text-align: center;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .brand-badge {
+            background-color: #000;
+            color: #fff;
+            padding: 4px 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.75rem;
+            border-radius: 2px;
+        }
+
+        /* --- 头部文章信息 --- */
+        header {
+            max-width: 740px;
+            margin: 60px auto 40px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: var(--font-sans);
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .meta-info {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .author-name {
+            font-weight: bold;
+            color: var(--accent-red);
+        }
+
+        /* --- 正文容器 --- */
+        article {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+
+        /* --- 章节标题 --- */
+        h2 {
+            font-family: var(--font-sans);
+            font-size: 1.8rem;
+            margin-top: 60px;
+            margin-bottom: 25px;
+            color: #111;
+            border-left: 5px solid var(--accent-red);
+            padding-left: 15px;
+            clear: both; /* 确保标题不被浮动图片影响 */
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+        }
+
+        /* --- 引用样式 --- */
+        blockquote {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            color: var(--text-light);
+            font-style: italic;
+            border-top: 2px solid #eee;
+            border-bottom: 2px solid #eee;
+            margin: 40px 0;
+            padding: 30px 20px;
+            text-align: center;
+            background: #fafafa;
+            clear: both; /* 确保引用块不被浮动图片影响 */
+        }
+
+        blockquote span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: var(--accent-red);
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        /* --- 链接样式 --- */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(26, 13, 171, 0.3);
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            background-color: rgba(26, 13, 171, 0.1);
+            border-bottom-color: var(--link-color);
+        }
+
+        /* --- 资源列表卡片 --- */
+        .resource-box {
+            background: #f0f0f0;
+            padding: 30px;
+            border-radius: 4px;
+            margin: 40px 0;
+            font-family: var(--font-sans);
+            clear: both;
+        }
+        
+        .resource-box h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .resource-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resource-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .resource-list li::before {
+            content: "•";
+            color: var(--accent-red);
+            position: absolute;
+            left: 0;
+        }
+
+        /* ========== 新增：图片样式 ========== */
+        
+        /* 右侧浮动图片样式 */
+        .float-right-image {
+            float: right;
+            width: 380px;
+            margin: 10px 0 25px 30px;
+            padding: 0;
+        }
+
+        .float-right-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .float-right-image figcaption {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 8px;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        /* 全宽文章配图样式 */
+        .article-image {
+            margin: 40px 0;
+            padding: 0;
+            clear: both;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-image figcaption {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* 清除浮动辅助类 */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* ========== 图片样式结束 ========== */
+
+        /* --- 底部 --- */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+        }
+        
+        .footer-note {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.7;
+        }
+
+        /* --- 移动端适配 --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            body { font-size: 17px; }
+            article { padding: 0 15px 60px; }
+            
+            /* 移动端图片样式调整 */
+            .float-right-image {
+                float: none;
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span>Citizen Journalism Project</span>
+            <span class="brand-badge">Raina在采访</span>
+            <span>2025 Edition</span>
+        </div>
+    </div>
+
+    <header>
+        <h1>"回家"：一份同妻女儿的家庭回忆录</h1>
+        <p style="font-size: 1.2rem; color: #666; font-style: italic;">
+            2003年，整个中国都沉浸在烟花与团圆的喜庆中庆祝一年一度的农历新年——羊年。但对于八岁的小涵来说，那年的农历新年却有着截然不同的记忆。
+        </p>
+        <div class="meta-info">
+            <span>Writer <span class="author-name">Raina</span></span>
+            <span>2025年12月10日</span>
+        </div>
+    </header>
+
+    <article>
+        <p>2003，中国农历癸未年。大多数中国人正在庆祝一年一度的农历新年，对于小涵来讲却并不意味着家人团圆。</p>
+        
+        <p>"2003年对于我来讲可以说是分水岭一样的一年，"受访者小涵（化名）早些时候告诉采访者，"虽然那个时候我才8岁，但我仍然记得那是第一次我没有和家人一起庆祝新年。"</p>
+
+        <p>小涵，1995年出生于湖北武汉，是都市普通中产阶级家庭的新成员。也是今天我们采访的主人公。</p>
+
+        <p>小涵花了数年时间才完全明白那个冬天导致她家庭分崩离析的真正原因；才学会用合适的词汇来描述母亲的困境；才能够清晰地表达自己对父亲复杂而矛盾的爱与怨恨。</p>
+
+        <p>如今，年近三十的她准备分享自己的故事。</p>
+
+        <h2>平常的开始</h2>
+        
+        <p>小涵出生于1995年夏天的湖北武汉，作为中国最重要的内陆城市之一，这座城市正在摆脱工业时代的阴影，飞速迈向现代化。长江两岸拔地而起一座座崭新的公寓楼，购物中心取代了昔日的集市。新一代的年轻夫妇梦想着未来的新生活。</p>
+
+        <p>其中包括小涵的父母，两人拥有了自己的女儿。</p>
+
+        <p>"我们就是普通的工薪阶层家庭，"小涵告诉采访者，"没什么特别的。我妈妈工作，我爸爸有自己的事业。我们住在一套不错的公寓里。从表面上看，我们没有任何不寻常之处。"</p>
+
+        <p>但在这层看似平静的表象之下，有些东西从一开始就不太对劲。</p>
+
+        <!-- ========== 图片1：pingzheng.jpg ========== -->
+        <figure class="float-right-image">
+            <img src="pingzheng.jpg" alt="受访者在豆瓣同妻组的发帖截图">
+            <figcaption>受访者在豆瓣同妻组的发帖</figcaption>
+        </figure>
+        <!-- ========== 图片1结束 ========== -->
+
+        <p>"我记得很小的时候，大概七八岁吧，总是看到或者听到爸妈争吵的声音。我妈妈在哭，我爸爸的声音很低，听不清在说什么。"</p>
+
+        <p>小涵说，那是她第一次意识到，父母之间可能存在着某种她无法理解的问题。</p>
+
+        <p>"但那个年代，哪个家庭不吵架呢？我以为这很正常。"</p>
+
+        <div class="clearfix"></div>
+
+        <h2>符水</h2>
+
+        <p>在中国的许多地方，当一个问题无法被言说，无法被正视，无法用理性的方式解决时，人们往往会求助于某种超自然的力量。这是一种古老的传统，根植于这片土地数千年的文化土壤中。</p>
+
+        <p>2001年，同性恋才在中国从《中国精神障碍分类与诊断标准》中被移除。也就是说事件发生之时，小涵的父亲一旦被发现身为同性恋，甚至可能被送进精神病院。</p>
+
+        <p>"大概是在我两三岁的时候我爸其实就被发现了，但是我太小了，那个时候的记忆真的不太清楚了，具体的也是后来听家里人说的。"小涵告诉采访者。</p>
+
+        <p>小涵的奶奶，和她那一代的许多中国女性一样，一生都在凭借务实和信仰克服重重困难。她经历了动荡的年代，并始终坚信，只要知道该往哪里寻找，所有问题都有解决办法。</p>
+
+        <p>"我奶奶给我爸爸喝符水，"小涵回忆道，她坚持用中国传统的老方法。"听说当时还找专门的神婆租了房子，就是每天灌我爸喝符纸捣碎的水。"</p>
+
+        <p>她解释说，在中国传统观念中，符水被认为具有"驱邪"、"矫正"的功效。奶奶显然认为，儿子身上的"问题"是某种邪气或者魔障，只要用正确的方式"驱除"，一切就能回归"正常"。</p>
+
+        <blockquote>
+            "在她的认知里，儿子不喜欢女人，一定是中了什么邪。她能想到的唯一解决方法，就是找神婆。"
+        </blockquote>
+
+        <p>"其实那个时候我很小嘛，听着没有太大感受，"小涵说，"但现在想起来，真的觉得很心酸。说不来是对我爸，还是对我奶奶。我奶奶那一代人，根本没有'同性恋'这个概念。"</p>
+
+        <p>据小涵所知，那段"符水治疗"持续了相当长的一段时间。奶奶为此花费了不少积蓄，甚至一度将那位神婆接到家里同住。</p>
+
+        <p>"当然没有用，"小涵说，她发送了一个笑哭的表情，"啥都没改变。"</p>
+
+        <p>"但是我不怪我奶奶，"小涵说，"她也是受害者。她只是想让自己的儿子'正常'，她一直以为同性恋就跟治病一样，可以被中药调理成异性恋回归正常。"</p>
+
+        <p>她又发送了一个笑哭的表情。</p>
+
+        <p>这样的故事至今仍在中国的各地以各种形式上演。如果您想了解更多相关背景，请观看此采访视频：<a href="https://www.bilibili.com/video/av368730433" target="_blank">Bilibili 相关采访视频</a></p>
+
+        <h2>沉默的1600万</h2>
+
+        <p>在我们继续讲述小涵的故事之前，有必要解释一个在中国公共话语中鲜少被提及的词汇：<strong>同妻</strong>。</p>
+
+        <p>"同妻"是"同性恋者的妻子"的简称，指的是那些在不知情或未完全知情的情况下，与男同性恋者结婚的异性恋女性。这个群体长期处于社会的阴影中，她们的存在、她们的痛苦、她们的困境，很少被公开讨论。（<a href="https://baike.baidu.com/item/%E5%90%8C%E5%A6%BB" target="_blank">点击查看同妻定义的百科</a>）</p>
+
+        <p>根据中国著名性学家、青岛大学教授张北川在2012年发表的研究估算，中国约有<strong>1600万名</strong>同妻。这个数字基于以下计算：中国约有2000万男同性恋者，其中约80%迫于社会和家庭压力选择与女性结婚。</p>
+
+        <p>1600万——这相当于荷兰整个国家的人口，或者澳大利亚人口的三分之二。</p>
+
+        <p>"这是一个被严重忽视的群体，"一位在UNNC毕业，现就读于UCL攻读性别研究专业的学长告诉采访者Raina，"在关于LGBTQ+权利的讨论中，我们往往关注的是同性恋者本身的处境。但其实还有一群更隐形的人在性少数群体背后，同妻是这场社会困境中最沉默、最无辜的受害者。"</p>
+
+        <p>同妻面临的困境是多重的，仅仅是笔者在中国最大论坛百度同妻小组的帖子来看：</p>
+
+        <p><strong>知情权的剥夺。 </strong>许多同妻在结婚时完全不知道丈夫的性取向，她们是在婚后多年——有时是几十年后——才发现真相。这种发现往往是毁灭性的，它颠覆了她们对婚姻、对丈夫、甚至对自身价值的全部认知。</p>
+
+        <p><strong>情感上的创伤。 </strong>许多同妻在发现真相后，会陷入深深的自我怀疑：是不是我不够好？是不是我不够有魅力？为什么他不爱我？这种自我否定往往持续多年，甚至一生。</p>
+
+        <p><strong>社会支持的缺失。 </strong>在中国，"同妻"是一个禁忌话题。许多同妻无法向亲友倾诉自己的处境，因为她们害怕被指责"家丑外扬"，或者被质疑"为什么不早点发现"。</p>
+
+        <p><strong>法律保障的缺位。 </strong>在中国现行的婚姻法律框架下，丈夫隐瞒性取向结婚并不构成婚姻无效的法定事由，同妻如果想要离婚，往往面临复杂的法律和财产纠纷。</p>
+
+        <p>"我妈妈是一名同妻，"小涵说，"而我爸爸自称是'中国同性恋体系的受害者'。"</p>
+
+        <p>她停顿了一下，然后说：</p>
+
+        <blockquote>
+            "但我妈妈呢？她又是谁的受害者？"
+        </blockquote>
+
+        <h2>一个父亲</h2>
+
+        <p>如果说有什么问题比其他任何问题都更困扰着小涵，那就是：爱一个人的同时又毁灭他，这究竟是什么意思？</p>
+
+        <p>孩子们往往比大人想象的更懂事。早在小涵能用语言描述家里发生的事情之前，她就知道出事了。</p>
+
+        <p>"我不记得自己是什么时候开始明白的，"她说。"反正各种碎片慢慢拼凑起来。就是家里的氛围嘛。"</p>
+
+        <p>"有一段时间，我真心实意的恨我的父亲，"她坦言。"真的恨他。我把一切都归咎于他。母亲的悲伤，我们破碎的家庭，以及家里一切都不正常，都是他的错。"</p>
+
+        <p>"我爸说他爱我，"她写到，"在很多方面，我相信他。他一直陪伴在我身边，在物质和经济上都给予我支持。我们之间也曾有过真挚的温情时刻。我无法否认这一点。"</p>
+
+        <p>我们的对话中断了很长时间。</p>
+
+        <p>一个半小时后，小涵又发来消息：</p>
+
+        <p>"但后来我想：如果他真的爱我，他会这样伤害我的母亲吗？他会故意不忠吗？他会把自己的需求置于我们家庭的幸福之上吗？"</p>
+
+        <p>她所指的婚外情并非猜测，而是她亲眼所见。小涵说，就算是到现在，她还是会疑神疑鬼父亲身边出现的任何同性。变得无比痛苦而且不知所措，有种一切都可能是父亲出轨对象的错觉。</p>
+
+        <p>"我爸把我毁了，然后又说爱我。反正他们至今还没离婚。他们过着这种我不太理解的奇怪生活。我还有很多话想跟他说，但是我真的不知道怎么面对他。"</p>
+
+        <h2>一个母亲</h2>
+
+        <!-- ========== 图片2：zuoziji.jpg ========== -->
+        <figure class="float-right-image">
+            <img src="zuoziji.jpg" alt="受访者在豆瓣同妻组对父母关系的评论截图">
+            <figcaption>受访者在豆瓣同妻组对父母关系的评论</figcaption>
+        </figure>
+        <!-- ========== 图片2结束 ========== -->
+
+        <p>在我们长达数十小时的间断对话中，小涵多次提到她的母亲。但每一次提及，都能让人心痛不已。</p>
+
+        <p>"我妈妈是一个很传统的中国女性，"小涵说，"她从小接受的教育就是：嫁一个好人，组建一个家庭，生一个孩子，好好过日子。"</p>
+
+        <p>小涵告诉采访者，她不确定母亲是什么时候知道父亲的性取向的，也不确定母亲知道多少。这些话题，在她们母女之间，从来没有被正式讨论过。</p>
+
+        <p>"我们家不太习惯谈这些，很多事情都是心照不宣的。妈妈可能觉得告诉我会伤害我，我也怕问出来会让妈妈更难过。所以我们就不说。"</p>
+
+        <p>但沉默不代表不存在。多年来，小涵从各种细节中拼凑出了母亲的痛苦：深夜的哭泣声，突然变得憔悴的面容，越来越少的真实的笑容。</p>
+
+        <p>"我不知道妈妈有没有想过类似'爸爸爱没爱过她'之类的话，"小涵说，"而且你知道，如果我妈也去找人出轨，她肯定会怕我伤心。她就是这种人。"</p>
+
+        <p>这句话揭示了一个残酷的事实：在这段婚姻中，母亲不仅要承受丈夫的背叛，还要独自消化这份痛苦，以免伤害到女儿。对于一位传统的中国母亲来讲，她的痛苦肯定是双重的——是受害者，但又要假装一切正常，因为她还有孩子。</p>
+
+        <p>"我有时候想，"小涵说，"妈妈这些年到底是怎么过来的。她明明可以走，可以离婚，可以开始新的生活。但她没有。也许是为了我，也许是为了面子，我真的不知道。时间太长，我不想追究了。"</p>
+
+        <div class="clearfix"></div>
+
+        <h2>体制受害者联盟</h2>
+
+        <p>近年来，中国出现了一个虽小但不断壮大的运动，旨在支持 "同妻"。网络论坛和微信群的活跃为女性提供了分享经历、寻求建议以及与其他感同身受者交流的空间。一些活动家和学者致力于提高公众对这一现象的认识，呼吁加强教育和提供更好的支持服务。</p>
+        
+        <p>虽然进展缓慢，但是你可以试图在以下平台找到他们：</p>
+
+        <div class="resource-box">
+            <h3>相关资源与社区</h3>
+            <ul class="resource-list">
+                <li><a href="http://weibo.com/baidutongqiba" target="_blank">新浪微博：同妻相关话题</a></li>
+                <li><a href="http://mp.weixin.qq.com/s?__biz=MzIwNDQ0NjUzNw==&mid=2247483677&idx=1&amp;sn=e95087ae20ebdc86370c77f818405881&amp;chksm=96c14f3ba1b6c62d6571e704011eaac45584824d61deaeef87fa582fa9f3560dbb16c6396bac&scene=4#wechat_redirect" target="_blank">微信公众号文章</a></li>
+                <li><a href="http://tieba.baidu.com/f?kw=%CD%AC%C6%DE" target="_blank">百度同妻吧</a></li>
+                <li><a href="https://buluo.qq.com/p/barindex.html?bid=323218" target="_blank">QQ兴趣部落</a></li>
+                <li><a href="https://www.douban.com/group/609392/" target="_blank">豆瓣同妻互助小组</a></li>
+                <li><a href="https://huati.weibo.com/5604286" target="_blank">微博超级话题</a></li>
+            </ul>
+        </div>
+
+        <p>对男同性恋者而言，结婚的压力依然巨大。家庭期望、职场歧视以及根深蒂固的文化中生育继承人的传统观念，共同迫使数百万男同性恋者步入他们无法在情感或生理上维系的异性婚姻。许多人真心相信自己可以改变，或者认为对家庭的责任高于个人欲望。而另一些人则根本看不到其他出路。</p>
+
+        <p>"我父亲是体制的受害者，"小涵说道。"也许他从未拥有过真正生活的自由。也许他被一些他无法控制的力量所困住。但是——"</p>
+
+        <blockquote>
+            "我母亲才是受害更深的人！我也是。这个体制处处制造受害者。它没有给任何人带来幸福和自由。"
+        </blockquote>
+
+        <p>"本报道是一个在中国主流媒体上从未有过的采访，揭示了：强迫同性恋男性进入异性婚姻的文化不仅伤害了男性，更伤害了那些不知情地成为他们伴侣的女性，以及在充满秘密和悲伤的家庭中长大的孩子们。</p>
+
+         <p>这是一个体制的问题，一个没有任何人得到真正自由的体制的问题。</p>
+
+        <h2>未来</h2>
+
+        <p>"我希望我妈妈幸福，"她最后说道。"我希望她能体验到真正被爱的感觉。被选择，而不是被凑合。和真正了解她、需要她的人在一起。她值得拥有这一切。"</p>
+
+        <p>小涵今年有机会和母亲前往上海旅游，她认为和母亲在一起旅游时，她们可以得到短暂的快乐。对于自己，"我想变得足够强大，能够帮助她。"小涵回答道。</p>
+
+        <!-- ========== 图片3：IMG_3039.jpg ========== -->
+        <figure class="article-image">
+            <img src="shanghai.jpg" alt="受访者与母亲的上海之行照片">
+            <figcaption>受访者提供的上海之行照片</figcaption>
+        </figure>
+        <!-- ========== 图片3结束 ========== -->
+
+        <p>采访最后，小涵完全没有提及他的父亲。也许他们父女也有共同的珍贵记忆，但她不再期待他会改变，也不再等待可能永远不会到来的道歉。</p>
+
+        <p>"以后肯定会更好，"小涵说，"也许情况会改变。我希望不要再有像我母亲那样的人"</p>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+        <h3>尾声</h3>
+
+        <p>本文付梓之际，已是2025年末。马年将至，中国人又会聚在一起庆祝家庭团圆。</p>
+
+        <p>小涵想祝所有的读者一切顺利。虽然她认为自己的故事很个人，但她一直希望自己将会被她所认为的"大学生/孩子"——也就是作为采访者的我们所理解。她祝大家"学业进步，每天开心。"</p>
+
+        <p>本文旨在为这个被忽视的群体提供一个发声的渠道。我们希望，通过小涵的故事，更多的人能够意识到"同妻"现象的存在，理解她们的处境，并思考我们作为社会中的一份子，能够做些什么来防止类似的悲剧继续发生。</p>
+
+         <p>同妻、以及他们的孩子，都是更大的社会结构的受害者。只有当整个社会变得更加开放、更加包容、更加尊重每个人的选择，这样的悲剧才有可能终结。</p>
+
+        <p>这正是我们做这篇报道的初衷。</p>
+    </article>
+
+    <footer>
+        <p>Citizen Journalism Project © 2025</p>
+        <div class="footer-note">
+            <p>本报道是一个学生独立新闻项目。</p>
+            <p>Special Thanks to: Xiaohan</p>
+            <p>Interviewer, writer, website programmer and online deployment: Raina</p>
+        </div>
+    </footer>
+
+</body>
+</html>
